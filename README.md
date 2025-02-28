@@ -103,3 +103,48 @@ client.set_api_keys(
     legifrance_api_secret=os.getenv("LEGIFRANCE_API_SECRET"),
 )
 ```
+
+
+--------------------------------
+# adaptations
+- poetry to pip requirements.txt (https://servidorandycode.medium.com/python-poetry-how-to-generate-a-requirements-txt-a4fdcee26fe3) `poetry export -f requirements.txt --without-hashes > requirements.txt`
+
+
+# install
+```
+python -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
+```
+
+# llamaindex storing
+- https://docs.llamaindex.ai/en/stable/understanding/storing/storing/
+
+# using ollama
+- https://docs.llamaindex.ai/en/stable/examples/llm/ollama/
+`pip install llama-index-llms-ollama`
+
+-- Ollama Embedding
+`pip install llama-index-embeddings-ollama`
+- https://docs.llamaindex.ai/en/stable/examples/embeddings/ollama_embedding/
+
+
+# qui est Paul Graham ?
+
+- https://www.startup-book.com/fr/2024/06/19/comment-creer-google-selon-paul-graham/
+- https://digtvbg.com/files/books-for-hacking/Hackers%20%26%20Painters%20-%20Big%20Ideas%20From%20The%20Computer%20Age%20by%20Paul%20Graham.pdf
+- https://www.chasse-aux-livres.fr/prix/0596006624/hackers-painters-paul-graham
+
+
+# usage 
+dans query.query_engine.py régler le code désiré et model d'embedding qui détermine selon schema.py le provider à utiliser
+
+```    code_name: str = "Code civil",
+    embedding_model: str = "nomic-embed-text",#"text-embedding-ada-002",
+    similarity_top_k: int = 5,
+    
+    ```
+
+pip install llama-index-embeddings-ollama
+
+lancer basic.py

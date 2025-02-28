@@ -88,7 +88,7 @@ def get_query_engine_based_on_index(
 
 def create_query_engine(
     code_name: str = "Code civil",
-    embedding_model: str = "text-embedding-ada-002",
+    embedding_model: str = "nomic-embed-text",#"text-embedding-ada-002",
     similarity_top_k: int = 5,
     sparse_top_k: int = 0,
     hybrid_search: bool = False,
