@@ -1,0 +1,30 @@
+{
+  "name": "legal-code-rag",
+  "version": "1.0.0",
+  "description": "In this project we explore implementing a basic and then an advanced RAG system using techniques like windowing, hybrid-search, query rewriting and routing. We also explore evaluating these techniques and others to help make choices about the RAG pipeline components. More details and a step by step tutorial here: https://medium.com/@hamzagharbi_19502/building-a-comprehensive-rag-system-advanced-features-and-in-depth-evaluation-3551be31858f",
+  "main": "get_code.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/scenaristeur/legal-code-rag.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/scenaristeur/legal-code-rag/issues"
+  },
+  "homepage": "https://github.com/scenaristeur/legal-code-rag#readme",
+  "dependencies": {
+    "axios": "^1.8.4",
+    "dotenv": "^16.5.0",
+    "node-fetch": "^3.3.2",
+    "request": "^2.88.2"
+  }
+}

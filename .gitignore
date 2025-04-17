@@ -162,3 +162,7 @@ cython_debug/
 
 # adaptation
 .venv
+codes
+.pass
+qdrant_storage
+node_modules

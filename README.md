@@ -1,6 +1,14 @@
 # Advanced RAG system on legal data
 In this project we explore implementing a basic and then an advanced RAG system using techniques like windowing, hybrid-search, query rewriting and routing. We also explore evaluating these techniques and others to help make choices about the RAG pipeline components. More details and a step by step tutorial here: https://medium.com/@hamzagharbi_19502/building-a-comprehensive-rag-system-advanced-features-and-in-depth-evaluation-3551be31858f
 
+
+# Run
+
+```bash
+python basic.py
+``` 
+
+
 ## Quickstart 
 
 First clone this github repository: 
@@ -139,7 +147,8 @@ pip install -r requirements.txt
 # usage 
 dans query.query_engine.py régler le code désiré et model d'embedding qui détermine selon schema.py le provider à utiliser
 
-```    code_name: str = "Code civil",
+```
+    code_name: str = "Code civil",
     embedding_model: str = "nomic-embed-text",#"text-embedding-ada-002",
     similarity_top_k: int = 5,
     
@@ -148,3 +157,24 @@ dans query.query_engine.py régler le code désiré et model d'embedding qui dé
 pip install llama-index-embeddings-ollama
 
 lancer basic.py
+-> ne fonctionne pas
+
+# test nodejs pour récupérer le code général des impots en json 
+
+```javascript
+node get_code.js 
+```
+-> donne parsed_cgi.txt
+
+https://www.legifrance.gouv.fr/codes/texte_lc/LEGITEXT000006069577/2025-04-16/
+
+1965 articles 
+
+- extraire les abrogated, garder les vigueur,
+- parcourir les sections,
+- parcourir les articles
+ s'inspirer de https://github.com/rdassignies/pylegifrance/blob/main/pylegifrance/pipeline/pipeline.py
+
+
+ # albert chunking
+ - C'est plutôt sur ce tuto qu'il faut s'appuyer si vous voulez chunker vous même : https://github.com/etalab-ia/albert-api/blob/main/docs/tutorials/import_knowledge_database.ipynb

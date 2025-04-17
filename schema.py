@@ -10,5 +10,5 @@ class OpenAISupportedModels(str, Enum):
     V3_SMALL = "text-embedding-3-small"
     V3_LARGE = "text-embedding-3-large"
 
-class OllamaSupportedModels(str, Enum):
-    nomic = "nomic-embed-text"
+# class OllamaSupportedModels(str, Enum):
+#     nomic = "nomic-embed-text"
